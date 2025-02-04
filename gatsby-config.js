@@ -4,7 +4,15 @@
 module.exports = {
   siteMetadata: {
     title: `Zach Time`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://zachtime.xyz`
   },
-  plugins: ["gatsby-plugin-sass"]
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "zachtime.xyz",
+      },
+    },
+  ]
 };
