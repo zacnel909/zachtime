@@ -3,17 +3,24 @@ import './component.styles.sass'
 
 const PageNavigation = (props) => {
   const [rotation, setRotation] = React.useState(45)
+  const [size, setSize] = React.useState(27)
   const onClickLeft = async () => {
-    // if (!props.onClickLeft) return
-    setRotation(prev => prev - 90)
+    if (!props.onClickLeft) return
+    setRotation(-45)
+    await new Promise((resolve) => setTimeout(resolve, 301))
+    props.onClickLeft()
   }
   const onClickCenter = async () => {
-    // if (!props.onClickCenter) return
-    setRotation(prev => prev - 90)
+    if (!props.onClickCenter) return
+    setSize(3)
+    await new Promise((resolve) => setTimeout(resolve, 301))
+    props.onClickCenter()
   }
   const onClickRight = async () => {
-    // if (!props.onClickLeft) return
-    setRotation(prev => prev + 90)
+    if (!props.onClickLeft) return
+    setRotation(135)
+    await new Promise((resolve) => setTimeout(resolve, 301))
+    props.onClickRight()
   }
 
   return (
@@ -26,9 +33,9 @@ const PageNavigation = (props) => {
     >
       <polygon
         onClick={onClickLeft}
-        className="navigation-button"
+        className={props.onClickLeft && "navigation-button"}
         points="5.412,21.000 28.794,34.500 28.794,7.500"
-        stroke="black"
+        stroke={props.onClickLeft ? "black" : "lightgrey"}
         strokeWidth="3"
         fill='white'
       />
@@ -38,10 +45,10 @@ const PageNavigation = (props) => {
         stroke='black'
         strokeWidth="3"
         fill='white'
-        width='27'
-        height='27'
-        x='49.5'
-        y='7.5'
+        width={size}
+        height={size}
+        x={63 - size / 2}
+        y={21 - size / 2}
         transform={`rotate(${rotation} 63 21)`}
       />
       <polygon
