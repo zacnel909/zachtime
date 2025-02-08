@@ -1,26 +1,28 @@
 import * as React from "react"
 import './component.styles.sass'
+import { navigate } from "gatsby"
 
 const PageNavigation = (props) => {
+  const { toLeft, toCenter, toRight } = props
   const [rotation, setRotation] = React.useState(45)
   const [size, setSize] = React.useState(27)
   const onClickLeft = async () => {
-    if (!props.onClickLeft) return
+    if (!toLeft) return
     setRotation(-45)
     await new Promise((resolve) => setTimeout(resolve, 301))
-    props.onClickLeft()
+    navigate(toLeft)
   }
   const onClickCenter = async () => {
-    if (!props.onClickCenter) return
+    if (!toCenter) return
     setSize(3)
     await new Promise((resolve) => setTimeout(resolve, 301))
-    props.onClickCenter()
+    navigate(toCenter)
   }
   const onClickRight = async () => {
-    if (!props.onClickLeft) return
+    if (!toRight) return
     setRotation(135)
     await new Promise((resolve) => setTimeout(resolve, 301))
-    props.onClickRight()
+    navigate(toRight)
   }
 
   return (
@@ -33,29 +35,32 @@ const PageNavigation = (props) => {
     >
       <polygon
         onClick={onClickLeft}
-        className={props.onClickLeft && "navigation-button"}
+        className={toLeft && "navigation-button"}
         points="5.412,21.000 28.794,34.500 28.794,7.500"
-        stroke={props.onClickLeft ? "black" : "lightgrey"}
+        stroke={toLeft ? "black" : "lightgrey"}
         strokeWidth="3"
         fill='white'
       />
       <rect
         onClick={onClickCenter}
-        className="navigation-button"
-        stroke='black'
+        className={toCenter && "navigation-button"}
+        stroke={toCenter ? "black" : "lightgrey"}
         strokeWidth="3"
         fill='white'
         width={size}
         height={size}
         x={63 - size / 2}
         y={21 - size / 2}
-        transform={`rotate(${rotation} 63 21)`}
+        style={{
+          transform: `rotate(${rotation}deg)`,
+          transformOrigin: '63px 21px',
+        }}
       />
       <polygon
         onClick={onClickRight}
-        className="navigation-button"
+        className={toRight && "navigation-button"}
         points="120.588,21.000 97.206,7.500 97.206,34.500"
-        stroke="black"
+        stroke={toRight ? "black" : "lightgrey"}
         strokeWidth="3"
         fill='white'
       />

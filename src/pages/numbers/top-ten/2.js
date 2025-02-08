@@ -8,19 +8,23 @@ import PageNavigation from "../../../components/PageNavigation"
 const Page = () => {
   return (
     <main>
-      <ChapterTitle enum={`2`} title={`three`}/>
+      <ChapterTitle enum={`4`} title={`two`}/>
       <ChapterBody>
         <p>
-          3 is <Link to={`/ranks/second`}>second</Link>
+          2 is <Link to={`/ranks/fourth`}>fourth</Link>
           <br/>
-          3 has a <Link to='/numbers/top-ten/9'>gay brother</Link>
+          2 is the liar
+          <br/>
+          2 loves talking
+          <br/>
+          2 believes he is god
         </p>
       </ChapterBody>
-      <PageNavigation toLeft='/numbers/top-ten/10' toCenter='/numbers' toRight='/numbers/top-ten/9'/>
+      <PageNavigation toLeft='/numbers/top-ten/9' toCenter='/numbers' toRight='/numbers/top-ten/8'/>
     </main>
   )
 }
 
 export default Page
 
-export const Head = () => <title>3</title>
+export const Head = () => <title>2</title>

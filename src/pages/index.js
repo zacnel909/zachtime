@@ -1,6 +1,7 @@
 import * as React from "react"
 import "./styles.sass"
 import ContentsItems from "../components/ContentsItems"
+import PageNavigation from "../components/PageNavigation"
 
 const contents = [
   'numbers',
@@ -17,6 +18,7 @@ const IndexPage = () => {
     <main>
       <h1>zach time</h1>
       <ContentsItems contents={contents}/>
+      <PageNavigation/>
     </main>
   )
 }

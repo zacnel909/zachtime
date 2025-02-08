@@ -7,9 +7,15 @@ export default function ContentsItem(props) {
         <div className="contents-item">
             <span className="contents-enum">{props.enum}</span>
             <span className="contents-value">
-                <Link to={props.to}>
+                {props.to.slice(0, 4) === 'http' ?
+                  (<a href={props.to} target='_blank' rel='noopener noreferrer'>
                     {props.label || props.to}
-                </Link>
+                  </a>)
+                  :
+                  (<Link to={props.to}>
+                      {props.label || props.to}
+                  </Link>)
+                }
             </span>
         </div>
     )

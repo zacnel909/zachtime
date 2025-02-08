@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../styles.sass"
 import ContentsItems from "../../components/ContentsItems"
+import PageNavigation from "../../components/PageNavigation"
 
 const contents = [
   { label: 'wordbowl', to: 'http://wordbowl.xyz'},
@@ -11,6 +12,7 @@ const IndexPage = () => {
     <main>
       <h1>games</h1>
       <ContentsItems contents={contents} />
+      <PageNavigation toCenter='/'/>
     </main>
   )
 }

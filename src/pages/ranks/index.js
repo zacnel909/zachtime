@@ -21,7 +21,7 @@ const IndexPage = () => {
     <main>
       <h1>ranks</h1>
       <ContentsItems contents={contents} />
-      <PageNavigation />
+      <PageNavigation toCenter='/'/>
     </main>
   )
 }

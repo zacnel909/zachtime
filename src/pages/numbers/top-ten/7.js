@@ -8,27 +8,29 @@ import PageNavigation from "../../../components/PageNavigation"
 const Page = () => {
   return (
     <main>
-      <ChapterTitle enum={`6`} title={`one`}/>
+      <ChapterTitle enum={`7`} title={`seven`}/>
       <ChapterBody>
         <p>
-          1 is <Link to={`/ranks/sixth`}>sixth</Link>
+          7 is <Link to={`/ranks/seventh`}>seventh</Link>
           <br/>
-          1 and <Link to='/numbers/top-ten/7'>7</Link> are sisters
+          7 believes in the hive
           <br/>
-          1 is the <Link to={`/ranks/first`}>first</Link> me
+          but not that she is part of it
           <br/>
-          1 trusts <Link to='/numbers/top-ten/2'>2</Link>
+          7 has a huge ego
           <br/>
-          1 is life
+          7 is zero sum
           <br/>
-          You are 1
+          7 is proud of his primality
+          <br/>
+          and unaware of her primacy
         </p>
       </ChapterBody>
-      <PageNavigation toLeft='/numbers/top-ten/8' toCenter='/numbers' toRight='/numbers/top-ten/7'/>
+      <PageNavigation toLeft='/numbers/top-ten/1' toCenter='/numbers' toRight='/numbers/top-ten/6'/>
     </main>
   )
 }
 
 export default Page
 
-export const Head = () => <title>1</title>
+export const Head = () => <title>7</title>
