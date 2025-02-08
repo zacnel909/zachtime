@@ -15,11 +15,11 @@ const Page = () => {
           <br/>
           8 has the same birthday as <Link to='/numbers/top-ten/2'>2</Link>
           <br/>
-          8 believes in a <Link to='/numbers/top-ten/4'>4</Link> dimensional god
+          8 believes in technology <b>and</b> art!
           <br/>
-          8 is emotional
+          in that order
           <br/>
-          8 is guilty
+          8 wants to be civilized
         </p>
       </ChapterBody>
       <PageNavigation toLeft='/numbers/top-ten/2' toCenter='/numbers' toRight='/numbers/top-ten/1'/>

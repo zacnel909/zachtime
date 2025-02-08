@@ -13,17 +13,17 @@ const Page = () => {
         <p>
           7 is <Link to={`/ranks/seventh`}>seventh</Link>
           <br/>
+          but thinks he is <Link to={`/ranks/first`}>first</Link> and <Link to={`/ranks/last`}>last</Link>
+          <br/>
           7 believes in the hive
           <br/>
-          but not that she is part of it
+          and that he is not a part of it
           <br/>
-          7 has a huge ego
+          7 is functional
           <br/>
-          7 is zero sum
+          7 knows he is prime
           <br/>
-          7 is proud of his primality
-          <br/>
-          and unaware of her primacy
+          which spoiled his personality
         </p>
       </ChapterBody>
       <PageNavigation toLeft='/numbers/top-ten/1' toCenter='/numbers' toRight='/numbers/top-ten/6'/>

@@ -13,8 +13,6 @@ const Page = () => {
         <p>
           4 is <Link to='/ranks/last'>last</Link>
           <br/>
-          and proud of it
-          <br/>
           4 hates word play
           <br/>
           and fears analogies
@@ -30,6 +28,8 @@ const Page = () => {
           but wants more out of her life
           <br/>
           4 loves a good reference
+          <br/>
+          as long it it doesn't include him
         </p>
       </ChapterBody>
       <PageNavigation toLeft='/numbers/top-ten/5' toCenter='/numbers'/>

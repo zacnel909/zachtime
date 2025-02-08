@@ -13,9 +13,9 @@ const Page = () => {
         <p>
           9 is <Link to={`/ranks/third`}>third</Link>
           <br/>
-          9 loves nostalgia
-          <br/>
           9 lives in <Link to='/numbers/top-ten/3'>3</Link> dimensions
+          <br/>
+          but thinks in <Link to='/numbers/top-ten/2'>2</Link>
         </p>
       </ChapterBody>
       <PageNavigation toLeft='/numbers/top-ten/3' toCenter='/numbers' toRight='/numbers/top-ten/2'/>

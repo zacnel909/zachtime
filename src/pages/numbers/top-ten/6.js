@@ -13,7 +13,7 @@ const Page = () => {
         <p>
           6 is <Link to={`/ranks/eighth`}>eighth</Link>
           <br/>
-          6 is the earth
+          6 is well rounded
           <br/>
           6 is afraid of <Link to='/numbers/top-ten/7'>7</Link>
           <br/>

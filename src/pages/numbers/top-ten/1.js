@@ -15,13 +15,13 @@ const Page = () => {
           <br/>
           1 and <Link to='/numbers/top-ten/7'>7</Link> are sisters
           <br/>
-          1 is the <Link to={`/ranks/first`}>first</Link> me
+          1 is Johnny Bananas
           <br/>
           1 trusts <Link to='/numbers/top-ten/2'>2</Link>
           <br/>
-          1 is life
+          1 loves to count
           <br/>
-          You are 1
+          Everyone has been 1
         </p>
       </ChapterBody>
       <PageNavigation toLeft='/numbers/top-ten/8' toCenter='/numbers' toRight='/numbers/top-ten/7'/>
